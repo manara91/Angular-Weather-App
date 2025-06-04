@@ -1,0 +1,77 @@
+.row {
+  row-gap: 30px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.details-info-title {
+  color: #336699;
+  margin-top: 12px;
+}
+.card-value {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card-title {
+  padding-bottom: 20px;
+}
+.col-auto {
+  padding: 0;
+}
+.suntime-value {
+  font-size: 25px;
+  padding: 0;
+}
+.unit {
+  font-size: 16px;
+}
+
+.card-img {
+  width: 60px;
+  height: 60px;
+  margin-left: 12px;
+}
+
+/* UV Index Card */
+::ng-deep ngx-gauge,
+::ng-deep canvas {
+  width: 100% !important;
+}
+
+::ng-deep canvas {
+  height: 120%;
+}
+
+.gauge-container {
+  height: 170px;
+}
+
+.circle {
+  margin-right: 15px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+@media (max-width: 991.9px) {
+  .suntime-value {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-info-title {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 767px) {
+  .row > .col-sm-12.col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}

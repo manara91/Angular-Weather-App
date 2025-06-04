@@ -1,0 +1,31 @@
+<div class="container d-flex flex-column justify-content-between gap-5">
+  <div class="top">
+    <div class="row justify-content-center">
+      <img
+        class="status-img"
+        alt="heute wetter img"
+        [src]="weatherCode | weatherCodeToImage"
+      />
+      <h1 class="fs-2 text-center">{{ temperature + " °C" }}</h1>
+      <h1 class="fs-2 text-center">{{ cityName }}</h1>
+    </div>
+
+    <div class="row mt-2">
+      <div>
+        <h5>
+          {{ weatherCode | weatherCodeToString }}
+        </h5>
+      </div>
+      <div class="">
+        <p class="fs-6" style="white-space: pre-line">{{ currentDate }}</p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="div-img row d-flex justify-content-center align-items-center rounded"
+  >
+    <img class="city-img" [src]="getCityPhotoUrl()" alt="Stadt Foto" />
+  </div>
+</div>
+
+<div id="map"></div>

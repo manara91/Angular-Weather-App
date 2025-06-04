@@ -1,0 +1,32 @@
+.status-img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.city-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#map {
+  display: none;
+}
+
+@media (min-width: 438px) and (max-width: 991px) {
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top > .row {
+    margin: 0;
+  }
+  .top h5 {
+    font-size: 25px;
+  }
+  .top > .row:nth-child(2) {
+    align-items: flex-end;
+  }
+}

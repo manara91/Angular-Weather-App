@@ -1,0 +1,43 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  /* Fonts */
+  --font-primary: "Kanit", Helvetica, Arial, sans-serif;
+  --font-bold: 700;
+  --font-light: 400;
+  --font-size-text: 13px;
+  --font-size-title: 25px;
+
+  /* Size */
+  --size-primary: 1.5rem;
+
+  --margin-primary: var(--size-primary);
+
+  --padding-primary: var(--size-primary);
+}
+* {
+  font-family: "MyFont";
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("./assets/fonts/Nexa-Heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hb-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding-top: 24px;
+  padding-bottom: 50px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .hb-container {
+    padding-top: 0;
+  }
+}

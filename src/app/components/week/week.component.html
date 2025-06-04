@@ -1,0 +1,23 @@
+<div class="container hb-container">
+  <div class="d-flex flex-column align-items-center">
+    <div class="pb-3">
+      <h2>{{ cityName }}</h2>
+    </div>
+
+    <div
+      *ngIf="generalWeatherInfo"
+      class="cards d-flex justify-content-center w-100 gap-5"
+    >
+      <app-card
+        *ngFor="
+          let date of generalWeatherInfo.daily.time | keyvalue;
+          index as i
+        "
+        [date]="date.value"
+        [weatherCode]="generalWeatherInfo!.daily.weather_code[i]"
+        [minTemperature]="generalWeatherInfo!.daily.temperature_2m_min[i]"
+        [maxTemperature]="generalWeatherInfo!.daily.temperature_2m_max[i]"
+      ></app-card>
+    </div>
+  </div>
+</div>

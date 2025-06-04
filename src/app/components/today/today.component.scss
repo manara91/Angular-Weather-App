@@ -1,0 +1,20 @@
+.general {
+  width: 25%;
+}
+
+.details {
+  width: 75%;
+}
+
+@media (max-width: 991px) {
+  .today {
+    flex-direction: column;
+  }
+  .general,
+  .details {
+    width: 100%;
+  }
+  .general {
+    margin-bottom: 40px;
+  }
+}

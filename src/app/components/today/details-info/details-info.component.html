@@ -1,0 +1,128 @@
+<div class="d-flex flex-column justify-content-between h-100">
+  <h3 class="details-info-title">Highlights des Tages</h3>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div class="card border border-secondary rounded h-100">
+        <div class="card-body">
+          <div class="card-title">UV index</div>
+          <div *ngIf="uv_index" class="gauge-container">
+            <ngx-gauge
+              type="semi"
+              [value]="uv_index"
+              [max]="12"
+              [thick]="10"
+              [foregroundColor]="getGaugeForegroundColor()"
+              [markers]="gaugeMarkers"
+            >
+            </ngx-gauge>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card border border-secondary rounded h-100">
+        <div class="card-body">
+          <div class="card-title">Windstatus</div>
+          <div class="card-value pt-3">
+            {{ wind_speed_10m }}
+            <span class="unit">km/h</span>
+          </div>
+          <div>
+            <img class="card-img" src="../../../../assets/images/wind.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card border border-secondary rounded h-100">
+        <div class="card-body">
+          <div class="card-title">Tageswechsel</div>
+
+          <div class="d-flex justify-content-between row">
+            <div class="col-auto">
+              <img
+                src="../../../../assets/images/up.png"
+                alt="Sunrise Icon"
+                style="width: 40px; height: 40px"
+              />
+            </div>
+            <div class="col text-center suntime-value">
+              <span>{{ sunrise }} Uhr</span>
+            </div>
+          </div>
+
+          <div class="d-flex row justify-content-between">
+            <div class="col-auto">
+              <img
+                src="../../../../assets/images/down.png"
+                alt="Sunrise Icon"
+                style="width: 40px; height: 40px"
+              />
+            </div>
+            <div class="col text-center suntime-value">
+              <span>{{ sunset }} Uhr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card border border-secondary rounded h-100">
+        <div class="card-body">
+          <div class="card-title">Luftfeuchtigkeit</div>
+          <div class="card-value pt-3">
+            {{ relative_humidity_2m }}
+            <sup class="unit">%</sup>
+          </div>
+          <div>
+            <img
+              class="card-img"
+              src="../../../../assets/images/humidity.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card border border-secondary rounded h-100">
+        <div class="card-body">
+          <div class="card-title">Sichtweite</div>
+          <div class="card-value pt-3">
+            {{ visibilityKm }}
+            <span class="unit">km</span>
+          </div>
+          <div>
+            <img
+              class="card-img"
+              src="../../../../assets/images/visibility.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card border border-secondary rounded h-100">
+        <div class="card-body">
+          <div class="card-title">Luftqualität</div>
+          <div class="card-value pt-3">{{ european_aqi }}</div>
+
+          <div class="d-flex col justify-content-between pb-4">
+            <img
+              class="card-img"
+              src="../../../../assets/images/air-quality.png"
+            />
+
+            <div class="text-center pt-3 me-3">
+              <div
+                class="circle"
+                [ngStyle]="{ 'background-color': aqiColor }"
+              ></div>
+              <span class="fs-6">{{ aqiCategory }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
